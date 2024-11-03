@@ -1,9 +1,10 @@
 import './App.css';
+import ButtonUsage from './components/ButtonUsage';
 
 function App() {
   return (
     <div className="App">
-  app
+  <ButtonUsage/>
     </div>
   );
 }
