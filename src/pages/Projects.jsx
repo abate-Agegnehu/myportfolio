@@ -80,7 +80,7 @@ const Description = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontSize: "1.1rem",
+  fontSize: "0.9rem",
   [theme.breakpoints.down("sm")]: {
     display: "none",
   },
