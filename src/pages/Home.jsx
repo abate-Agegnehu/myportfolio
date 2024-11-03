@@ -5,6 +5,7 @@ import abate2 from "../images/abate2.png";
 const Root = styled("div")(({ theme }) => ({
   flexGrow: 1,
   display: "flex",
+  margin: "-1% 0%",
   background:
     "linear-gradient(to right, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
   position: "relative",
