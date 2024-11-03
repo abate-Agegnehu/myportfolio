@@ -5,7 +5,7 @@ import abate2 from "../images/abate2.png";
 const Root = styled("div")(({ theme }) => ({
   flexGrow: 1,
   display: "flex",
-  margin: "-1% 0%",
+  margin: "-1.1% 0%",
   background:
     "linear-gradient(to right, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
   position: "relative",
@@ -18,7 +18,7 @@ const Root = styled("div")(({ theme }) => ({
 
 const Left = styled("div")(({ theme }) => ({
   flex: 1,
-  margin: "5% 3%",
+  margin: "5% 3% 0% 3%",
   maxWidth: "50%",
   padding: theme.spacing(2),
   [theme.breakpoints.down("sm")]: {
@@ -43,7 +43,7 @@ const Right = styled("div")(({ theme }) => ({
 
 const Image = styled("img")({
   width: "100%",
-  height: "auto",
+  height: "100%",
   borderRadius: "10px",
 });
 

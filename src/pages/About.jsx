@@ -34,6 +34,9 @@ const Right = styled("div")(({ theme }) => ({
   margin: "5% 3%",
   maxWidth: "50%",
   padding: theme.spacing(2),
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
   [theme.breakpoints.down("sm")]: {
     maxWidth: "80%",
     margin: "10% 0",
@@ -42,7 +45,8 @@ const Right = styled("div")(({ theme }) => ({
 
 const Image = styled("img")({
   width: "100%",
-  height: "auto",
+  height: "100%",
+  objectFit: "cover",
   borderRadius: "10px",
 });
 
@@ -64,7 +68,7 @@ const Paragraph = styled("p")({
 const Divider = styled("hr")({
   height: "1px",
   background: "#000000",
-  width: "60%",
+  width: "40%",
   margin: "10px auto",
 });
 
