@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@mui/material";
+import { styled } from "@mui/material/styles"; 
 import moviemania from "../images/moviemania.png";
 import applewebsite from "../images/applewebsite.png";
 import ecommerce from "../images/ecommerce.png";
@@ -8,92 +8,96 @@ import todolist from "../images/todolist.png";
 import tmovie from "../images/tmovie.png";
 import dashboard from "../images/dashboard.png";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    background:
-      "linear-gradient(to top, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
-    padding: theme.spacing(3),
+
+const Root = styled("div")(({ theme }) => ({
+  flexGrow: 1,
+  background:
+    "linear-gradient(to top, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
+  padding: theme.spacing(3),
+}));
+
+const ProjectContainer = styled("div")({
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+});
+
+const Project = styled("div")(({ theme }) => ({
+  position: "relative",
+  width: "100%",
+  maxWidth: "300px",
+  margin: theme.spacing(2),
+  borderRadius: "10px",
+  boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+  textAlign: "center",
+  background: "#f9f9f9",
+  overflow: "hidden",
+  "&:hover .description": {
+    transform: "translateY(0)",
   },
-  projectContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
+  "&:hover .projectName": {
+    opacity: 0,
   },
-  project: {
-    position: "relative",
-    width: "100%",
-    maxWidth: "300px",
-    margin: theme.spacing(2),
-    borderRadius: "10px",
-    boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
-    textAlign: "center",
-    background: "#f9f9f9",
-    overflow: "hidden",
-    "&:hover $description": {
-      transform: "translateY(0)",
-    },
-    "&:hover $projectName": {
-      opacity: 0,
-    },
-    [theme.breakpoints.up("sm")]: {
-      width: "45%",
-    },
-    [theme.breakpoints.up("md")]: {
-      width: "30%",
-    },
-    [theme.breakpoints.up("lg")]: {
-      width: "25%",
-    },
+  [theme.breakpoints.up("sm")]: {
+    width: "45%",
   },
-  image: {
-    width: "100%",
-    height: "67%",
-    objectFit: "cover",
-    borderRadius: "10px 10px 0 0",
+  [theme.breakpoints.up("md")]: {
+    width: "30%",
   },
-  hr: {
-    height: "1px",
-    background: "#000000",
-    width: "20%",
-    margin: "0 auto",
-  },
-  title: {
-    color: "#007F87",
-    fontSize: "3rem",
-    fontWeight: "bold",
-    margin: theme.spacing(2, 0),
-    textAlign: "center",
-  },
-  description: {
-    position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    background:
-      "linear-gradient(to top, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
-    color: "black",
-    padding: theme.spacing(1),
-    textAlign: "center",
-    transform: "translateY(100%)",
-    transition: "transform 0.3s ease",
-    height: "25%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "1.1rem",
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
-  projectName: {
-    transition: "opacity 0.3s ease",
+  [theme.breakpoints.up("lg")]: {
+    width: "25%",
   },
 }));
 
-const Projects = () => {
-  const classes = useStyles();
+const Image = styled("img")({
+  width: "100%",
+  height: "67%",
+  objectFit: "cover",
+  borderRadius: "10px 10px 0 0",
+});
 
+const Hr = styled("hr")({
+  height: "1px",
+  background: "#000000",
+  width: "20%",
+  margin: "0 auto",
+});
+
+const Title = styled("h1")(({ theme }) => ({
+  color: "#007F87",
+  fontSize: "3rem",
+  fontWeight: "bold",
+  margin: theme.spacing(2, 0),
+  textAlign: "center",
+}));
+
+const Description = styled("div")(({ theme }) => ({
+  position: "absolute",
+  bottom: 0,
+  left: 0,
+  right: 0,
+  background:
+    "linear-gradient(to top, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
+  color: "black",
+  padding: theme.spacing(1),
+  textAlign: "center",
+  transform: "translateY(100%)",
+  transition: "transform 0.3s ease",
+  height: "25%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: "1.1rem",
+  [theme.breakpoints.down("sm")]: {
+    display: "none",
+  },
+}));
+
+const ProjectName = styled("p")({
+  transition: "opacity 0.3s ease",
+});
+
+const Projects = () => {
   const projects = [
     {
       name: "Movie Mania",
@@ -147,27 +151,23 @@ const Projects = () => {
   ];
 
   return (
-    <div className={classes.root}>
+    <Root>
       <div>
-        <h1 className={classes.title}>Projects</h1>
-        <hr className={classes.hr} />
+        <Title>Projects</Title>
+        <Hr />
       </div>
-      <div className={classes.projectContainer}>
+      <ProjectContainer>
         {projects.map((project, index) => (
-          <div key={index} className={classes.project}>
+          <Project key={index}>
             <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={project.image}
-                alt={project.name}
-                className={classes.image}
-              />
+              <Image src={project.image} alt={project.name} />
             </a>
-            <p className={classes.projectName}>{project.name}</p>
-            <div className={classes.description}>{project.description}</div>
-          </div>
+            <ProjectName>{project.name}</ProjectName>
+            <Description>{project.description}</Description>
+          </Project>
         ))}
-      </div>
-    </div>
+      </ProjectContainer>
+    </Root>
   );
 };
 
