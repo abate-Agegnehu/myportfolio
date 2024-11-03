@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from "@mui/material/styles"; 
+import { styled } from "@mui/material/styles";
 import moviemania from "../images/moviemania.png";
 import applewebsite from "../images/applewebsite.png";
 import ecommerce from "../images/ecommerce.png";
@@ -8,12 +8,11 @@ import todolist from "../images/todolist.png";
 import tmovie from "../images/tmovie.png";
 import dashboard from "../images/dashboard.png";
 
-
 const Root = styled("div")(({ theme }) => ({
   flexGrow: 1,
+  padding: theme.spacing(3),
   background:
     "linear-gradient(to top, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
-  padding: theme.spacing(3),
 }));
 
 const ProjectContainer = styled("div")({
@@ -38,14 +37,8 @@ const Project = styled("div")(({ theme }) => ({
   "&:hover .projectName": {
     opacity: 0,
   },
-  [theme.breakpoints.up("sm")]: {
-    width: "45%",
-  },
   [theme.breakpoints.up("md")]: {
     width: "30%",
-  },
-  [theme.breakpoints.up("lg")]: {
-    width: "25%",
   },
 }));
 
@@ -162,8 +155,10 @@ const Projects = () => {
             <a href={project.link} target="_blank" rel="noopener noreferrer">
               <Image src={project.image} alt={project.name} />
             </a>
-            <ProjectName>{project.name}</ProjectName>
-            <Description>{project.description}</Description>
+            <ProjectName className="projectName">{project.name}</ProjectName>
+            <Description className="description">
+              {project.description}
+            </Description>
           </Project>
         ))}
       </ProjectContainer>
