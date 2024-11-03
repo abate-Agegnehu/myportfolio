@@ -1,10 +1,12 @@
-import './App.css';
-import ButtonUsage from './components/ButtonUsage';
+import "./App.css";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <div className="App">
-  <ButtonUsage/>
+      <NavBar />
+      <Footer />
     </div>
   );
 }
