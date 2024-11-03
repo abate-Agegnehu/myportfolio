@@ -68,7 +68,7 @@ const NavBar = () => {
               color="inherit"
               aria-label="menu"
               onClick={toggleDrawer(true)}
-              sx={{ mr: 2, display: { xs: "block", sm: "none" } }} // Hide on larger screens
+              sx={{ mr: 2, display: { xs: "block", sm: "none" } }}
             >
               <MenuIcon />
             </IconButton>
@@ -86,7 +86,7 @@ const NavBar = () => {
                 key={item}
                 variant="h6"
                 onClick={() => scrollToSection(item)}
-                sx={{ cursor: "pointer", display: { xs: "none", sm: "block" } }} // Show only on larger screens
+                sx={{ cursor: "pointer", display: { xs: "none", sm: "block" } }}
               >
                 {item}
               </Typography>
@@ -94,17 +94,20 @@ const NavBar = () => {
           </div>
         </Toolbar>
       </AppBar>
+
       <Drawer
         anchor="left"
         open={drawerOpen}
         onClose={toggleDrawer(false)}
         PaperProps={{
           sx: {
+            marginTop: "64px", // Height of AppBar
             background:
               "linear-gradient(to left, transparent 0%, rgba(10, 200, 150, 0.6) 100%)",
             color: "white",
             fontSize: "20px",
             fontWeight: "bold",
+            width: "200px",
           },
         }}
       >
