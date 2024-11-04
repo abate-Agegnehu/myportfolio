@@ -52,7 +52,7 @@ const Image = styled("img")({
 const Hr = styled("hr")({
   height: "1px",
   background: "#000000",
-  width: "20%",
+  width: "16%",
   margin: "0 auto",
 });
 
