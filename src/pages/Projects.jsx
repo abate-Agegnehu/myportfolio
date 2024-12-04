@@ -7,6 +7,7 @@ import pokemen from "../images/pokemen.png";
 import todolist from "../images/todolist.png";
 import tmovie from "../images/tmovie.png";
 import dashboard from "../images/dashboard.png";
+import musicheaven from "../images/musicheaven.png";
 
 const Root = styled("div")(({ theme }) => ({
   flexGrow: 1,
@@ -99,6 +100,14 @@ const Projects = () => {
       description:
         "An interactive application for browsing the top trending movies with various filtering options.",
     },
+    {
+      name: "Music Haven",
+      image: musicheaven,
+      link: "https://abatemusiccollections.netlify.app/",
+      description:
+        "A dynamic platform to explore, collect, and listen to your favorite music tracks, with powerful search and playlist creation features.",
+    },
+
     {
       name: "Apple Website",
       image: applewebsite,
