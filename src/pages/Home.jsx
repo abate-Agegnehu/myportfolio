@@ -89,8 +89,8 @@ const Home = () => {
         <H1>Abate Agegnehu</H1>
         <H4>And I'm now</H4>
         <Paragraph>
-          Currently a 4th-year Software Engineering student at Wolkite
-          University, Full-Stack developer
+          Software Engineer specializing in Full-Stack Development. Skilled in
+          designing and implementing dynamic web applications.
         </Paragraph>
       </Right>
     </Root>
