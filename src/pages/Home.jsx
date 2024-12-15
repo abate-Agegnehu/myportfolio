@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import abate2 from "../images/abate2.png";
+import proverb from "../images/proverb.png";
+
 
 const Root = styled("div")(({ theme }) => ({
   flexGrow: 1,
@@ -82,15 +83,21 @@ const Home = () => {
   return (
     <Root>
       <Left>
-        <Image src={abate2} alt="Abate Agegnehu" />
+        <Image src={proverb} alt="Abate Agegnehu" />
       </Left>
       <Right>
-        <H2>Hello It's Me</H2>
-        <H1>Abate Agegnehu</H1>
-        <H4>And I'm now</H4>
+        <H2>
+          A voice that bridges worlds, reminding us that every connection starts
+          with a simple greeting
+        </H2>
+
         <Paragraph>
-          Software Engineer specializing in Full-Stack Development. Skilled in
-          designing and implementing dynamic web applications.
+          "A software engineer builds not just code, but bridges between
+          imagination and innovation, crafting dynamic solutions that shape the
+          digital future." This captures the essence of being a skilled
+          Full-Stack Developer, emphasizing your role in creating impactful web
+          applications. If you’d like further refinement or customization, let
+          me know!
         </Paragraph>
       </Right>
     </Root>
