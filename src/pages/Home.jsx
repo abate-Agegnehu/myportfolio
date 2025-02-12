@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import proverb from "../images/proverb.png";
+import mern from "../images/mern.png";
 
 
 const Root = styled("div")(({ theme }) => ({
@@ -83,21 +83,24 @@ const Home = () => {
   return (
     <Root>
       <Left>
-        <Image src={proverb} alt="Abate Agegnehu" />
+        <Image src={mern} alt="Abate Agegnehu" />
       </Left>
       <Right>
         <H2>
-          A voice that bridges worlds, reminding us that every connection starts
-          with a simple greeting
+          A well-structured MERN app is like a sturdy house—MongoDB lays the
+          foundation, Express builds the framework, React crafts the design, and
+          Node.js brings it all to life.
         </H2>
 
         <Paragraph>
-          "A software engineer builds not just code, but bridges between
-          imagination and innovation, crafting dynamic solutions that shape the
-          digital future." This captures the essence of being a skilled
-          Full-Stack Developer, emphasizing your role in creating impactful web
-          applications. If you’d like further refinement or customization, let
-          me know!
+          In MERN stack development, each technology plays a crucial role, much
+          like constructing a house. MongoDB acts as the foundation, storing and
+          organizing data efficiently. Express.js builds the backend framework,
+          handling server-side logic and API requests. React.js crafts the
+          front-end experience, ensuring a dynamic and interactive user
+          interface. Node.js powers the system, enabling seamless communication
+          between the frontend and backend, bringing the entire application to
+          life.
         </Paragraph>
       </Right>
     </Root>
