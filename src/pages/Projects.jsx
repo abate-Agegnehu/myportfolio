@@ -8,6 +8,8 @@ import todolist from "../images/todolist.png";
 import tmovie from "../images/tmovie.png";
 import dashboard from "../images/dashboard.png";
 import musicheaven from "../images/musicheaven.png";
+import awura from "../images/awura.png";
+
 
 const Root = styled("div")(({ theme }) => ({
   flexGrow: 1,
@@ -93,6 +95,13 @@ const ProjectName = styled("p")({
 
 const Projects = () => {
   const projects = [
+    {
+      name: "Awura Computing",
+      image: awura,
+      link: "https://awuratech.netlify.app/",
+      description:
+        "An interactive application and user-friendly website for Awura Computing Technology PLC.",
+    },
     {
       name: "Movie Mania",
       image: moviemania,

@@ -78,10 +78,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_t5mrshk",
-        "template_z4ugh4s",
+        "service_ieyp4s9",
+        "template_jt2rxz2",
         formData,
-        "7f3RtTbPz1kzMs0_X"
+        "qA-4-YdbGi9MIp6Dg"
       )
       .then(
         (result) => {
