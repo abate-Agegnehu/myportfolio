@@ -56,21 +56,21 @@ const H2 = styled("h2")({
   textAlign: "left",
 });
 
-const H1 = styled("h1")({
-  color: "#007F87",
-  fontSize: "3rem",
-  fontWeight: "900",
-  margin: "2px 0",
-  textAlign: "left",
-});
+// const H1 = styled("h1")({
+//   color: "#007F87",
+//   fontSize: "3rem",
+//   fontWeight: "900",
+//   margin: "2px 0",
+//   textAlign: "left",
+// });
 
-const H4 = styled("h4")({
-  color: "#000000",
-  fontSize: "1.5rem",
-  margin: "2px 0",
-  fontWeight: "bold",
-  textAlign: "left",
-});
+// const H4 = styled("h4")({
+//   color: "#000000",
+//   fontSize: "1.5rem",
+//   margin: "2px 0",
+//   fontWeight: "bold",
+//   textAlign: "left",
+// });
 
 const Paragraph = styled("p")({
   fontSize: "1.25rem",
