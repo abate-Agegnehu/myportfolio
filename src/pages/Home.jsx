@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import mern from "../images/mern.png";
+import image from "../images/image.png";
 
 
 const Root = styled("div")(({ theme }) => ({
@@ -56,21 +56,7 @@ const H2 = styled("h2")({
   textAlign: "left",
 });
 
-// const H1 = styled("h1")({
-//   color: "#007F87",
-//   fontSize: "3rem",
-//   fontWeight: "900",
-//   margin: "2px 0",
-//   textAlign: "left",
-// });
 
-// const H4 = styled("h4")({
-//   color: "#000000",
-//   fontSize: "1.5rem",
-//   margin: "2px 0",
-//   fontWeight: "bold",
-//   textAlign: "left",
-// });
 
 const Paragraph = styled("p")({
   fontSize: "1.25rem",
@@ -83,13 +69,11 @@ const Home = () => {
   return (
     <Root>
       <Left>
-        <Image src={mern} alt="Abate Agegnehu" />
+        <Image src={image} alt="Abate Agegnehu" />
       </Left>
       <Right>
         <H2>
-          A well-structured MERN app is like a sturdy house—MongoDB lays the
-          foundation, Express builds the framework, React crafts the design, and
-          Node.js brings it all to life.
+        MERN: Foundation, Framework, Design, Life.
         </H2>
 
         <Paragraph>
